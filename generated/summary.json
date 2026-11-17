@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-17T08:57:31+00:00",
+  "source": {
+    "name": "Lahman Teams.csv (2025, commit-pinned mirror)",
+    "url": "https://raw.githubusercontent.com/corbtastik/lahman-baseball-db/b5e7327707fff91ff3bdcbe1f6892c8c5015cf1d/Teams.csv",
+    "sha256": "0e7afdd8b837d0edaca770a28817eec6613bd8255979c1be6e3f5827f4b88fd6"
+  },
+  "analysis": {
+    "start_year": 2010,
+    "end_year": 2025,
+    "n_team_seasons": 480,
+    "excluded_trend_years": [
+      2020,
+      2021
+    ],
+    "target_report_year": 2023
+  },
+  "inference_note": "30개 전체 구단의 관측 변화와 확률모형 기반 추론을 구분한다. p값·CI는 구단간 독립성 등 가정에 조건부이며 정책의 인과효과가 아니다.",
+  "comparisons": [
+    {
+      "baseline_year": 2019,
+      "target_year": 2023,
+      "n_teams": 30,
+      "increased_teams": 15,
+      "mean_difference": 918.4682355967077,
+      "ci95_low": -1184.9649615598444,
+      "ci95_high": 3021.9014327532595,
+      "p_value": 0.3791798400910732,
+      "league_baseline": 28198.791683820502,
+      "league_target": 29114.14197530864,
+      "league_change_pct": 3.246062107027581
+    },
+    {
+      "baseline_year": 2022,
+      "target_year": 2023,
+      "n_teams": 30,
+      "increased_teams": 26,
+      "mean_difference": 2551.470031366055,
+      "ci95_low": 1390.1457974837672,
+      "ci95_high": 3712.794265248343,
+      "p_value": 0.00010339187283570046,
+      "league_baseline": 26566.525925925926,
+      "league_target": 29114.14197530864,
+      "league_change_pct": 9.589571690653509
+    },
+    {
+      "baseline_year": 2022,
+      "target_year": 2025,
+      "n_teams": 30,
+      "increased_teams": 22,
+      "mean_difference": 2823.921060172639,
+      "ci95_low": 766.2444050954205,
+      "ci95_high": 4881.597715249858,
+      "p_value": 0.00885012698023884,
+      "league_baseline": 26566.525925925926,
+      "league_target": 29386.593004115228,
+      "league_change_pct": 10.615114245845891
+    }
+  ],
+  "models": {
+    "primary": {
+      "level_difference": 2227.900139633599,
+      "p_value": 0.0072658869088933365,
+      "ci95_low": 735.2913784529708,
+      "ci95_high": 3720.5089008142268
+    },
+    "without_2022": {
+      "level_difference": 1214.4503854043708,
+      "p_value": 0.1020928479783989,
+      "ci95_low": -289.06699074008725,
+      "ci95_high": 2717.967761548829
+    }
+  },
+  "environment": {
+    "python": "3.13.12",
+    "platform": "Windows",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "scipy": "1.15.3",
+      "statsmodels": "0.14.4",
+      "matplotlib": "3.10.3",
+      "nbformat": "5.10.4",
+      "nbclient": "0.10.2",
+      "ipykernel": "6.29.5"
+    }
+  }
+}
